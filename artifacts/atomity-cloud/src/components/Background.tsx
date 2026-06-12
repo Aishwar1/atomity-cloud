@@ -1,3 +1,7 @@
 export default function Background() {
-  return <div className="background-root" aria-hidden="true" />;
+  return (
+    <div className="background-root" aria-hidden="true">
+      <div className="bg-grid" />
+    </div>
+  );
 }

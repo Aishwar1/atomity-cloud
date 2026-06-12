@@ -55,8 +55,8 @@ export default function Hero() {
               <div className="hero-browser-address">app.atomity.io/dashboard</div>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
-              alt="Atomity cloud cost dashboard showing spend breakdown across AWS, Azure and GCP"
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80"
+              alt="Data center server rack with infrastructure running AWS, Azure and GCP workloads"
               className="hero-screenshot"
               loading="eager"
               width="1400"

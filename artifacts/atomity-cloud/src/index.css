@@ -2,9 +2,9 @@
 
 /* ─── Design Tokens ──────────────────────────────────────────── */
 :root {
-  --color-bg-primary:    #09090f;
-  --color-bg-surface:    #111119;
-  --color-bg-card:       #141420;
+  --color-bg-primary:    #07000c;
+  --color-bg-surface:    #0d0010;
+  --color-bg-card:       #110015;
   --color-text-primary:  #f1f5f9;
   --color-text-muted:    #64748b;
   --color-text-subtle:   #475569;
@@ -38,8 +38,22 @@ img { display: block; max-inline-size: 100%; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse 100% 60% at 50% -5%, rgba(59,130,246,0.07) 0%, transparent 65%),
-              linear-gradient(180deg, #09090f 0%, #0b0b14 100%);
+  background:
+    radial-gradient(ellipse 75% 55% at 15% 20%, rgba(220, 20, 40, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 80%, rgba(180, 10, 50, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 65% at 55% 0%,  rgba(160, 0,  30, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 30% 95%, rgba(100, 0,  20, 0.14) 0%, transparent 55%),
+    linear-gradient(160deg, #07000c 0%, #0b0003 45%, #060009 100%);
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200, 10, 40, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 10, 40, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 0%, transparent 85%);
 }
 
 /* ─── Layout ─────────────────────────────────────────────────── */
