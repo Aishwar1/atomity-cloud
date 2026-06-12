@@ -1,24 +1,23 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Background from "./components/Background";
 import Nav from "./components/Nav";
+import Background from "./components/Background";
 import Hero from "./components/Hero";
+import Logos from "./components/Logos";
 import FeatureSection from "./components/FeatureSection";
 import SavingsCard from "./components/SavingsCard";
 import Footer from "./components/Footer";
 
-const queryClient = new QueryClient();
-
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <Background />
       <Nav />
       <main>
         <Hero />
+        <Logos />
         <FeatureSection />
         <SavingsCard />
       </main>
       <Footer />
-    </QueryClientProvider>
+    </>
   );
 }

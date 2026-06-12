@@ -1,89 +1,68 @@
 import { motion } from "framer-motion";
-import CloudDiagram from "./CloudDiagram";
-
-const badge = "Cloud Optimization Platform";
 
 export default function Hero() {
   return (
     <section className="hero-section" aria-labelledby="hero-heading">
       <div className="hero-inner">
-        <div className="hero-content">
-          <motion.div
-            className="hero-badge"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="hero-badge-dot" aria-hidden="true" />
-            {badge}
-          </motion.div>
+        <motion.div
+          className="hero-content"
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="hero-tag">For DevOps &amp; Platform Teams</div>
 
-          <motion.h1
-            id="hero-heading"
-            className="hero-heading"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-          >
-            Your Clouds Finally Speak{" "}
-            <span className="gradient-text">The Same Language</span>
-          </motion.h1>
+          <h1 id="hero-heading" className="hero-heading">
+            Cloud cost visibility<br />
+            you can actually act on
+          </h1>
 
-          <motion.p
-            className="hero-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            Aggregate infrastructure signals across AWS, Azure and Kubernetes
-            into one optimization engine. Cut costs, reduce drift, act faster.
-          </motion.p>
+          <p className="hero-subtitle">
+            Connect your AWS, Azure, GCP, and Kubernetes clusters.
+            Atomity surfaces waste, drift, and savings opportunities
+            in a single pane — no scripts required.
+          </p>
 
-          <motion.div
-            className="hero-ctas"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.45 }}
-          >
-            <a href="#metrics" className="btn-primary">
-              See Live Metrics
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M1 7h12M8 3l5 4-5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+          <div className="hero-ctas">
+            <a href="#" className="btn-primary">
+              Start free trial
             </a>
-            <a href="#" className="btn-ghost">Watch Demo</a>
-          </motion.div>
+            <a href="#features" className="btn-ghost">See how it works</a>
+          </div>
 
-          <motion.div
-            className="hero-stats"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.65 }}
-          >
-            {[
-              { val: "3", unit: "clouds", label: "integrated" },
-              { val: "43k", unit: "$", label: "avg. monthly savings" },
-              { val: "99.9", unit: "%", label: "uptime SLA" },
-            ].map((s) => (
-              <div key={s.label} className="hero-stat">
-                <div className="hero-stat-val">
-                  <span className="hero-stat-unit">{s.unit === "$" ? "$" : ""}</span>
-                  {s.val}
-                  <span className="hero-stat-unit">{s.unit !== "$" ? s.unit : ""}</span>
-                </div>
-                <div className="hero-stat-label">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+          <div className="hero-proof">
+            <span>No credit card required</span>
+            <span className="hero-proof-dot" aria-hidden="true" />
+            <span>5-minute setup</span>
+            <span className="hero-proof-dot" aria-hidden="true" />
+            <span>SOC 2 Type II</span>
+          </div>
+        </motion.div>
 
         <motion.div
-          className="hero-diagram-wrap"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          className="hero-visual"
+          initial={{ opacity: 0, y: 36 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
         >
-          <CloudDiagram />
+          <div className="hero-browser">
+            <div className="hero-browser-bar">
+              <div className="hero-browser-dots" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="hero-browser-address">app.atomity.io/dashboard</div>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
+              alt="Atomity cloud cost dashboard showing spend breakdown across AWS, Azure and GCP"
+              className="hero-screenshot"
+              loading="eager"
+              width="1400"
+              height="900"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
